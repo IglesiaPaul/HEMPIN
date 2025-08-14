@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hemp'in — your brand, hemp inside</title>
+  <meta name="description" content="HEMP'IN — Pop-Up Showroom & Online Marketplace Launch in Bangkok during Asia International Hemp Expo. Register your brand to showcase & sell." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS (CDN for rapid deployment) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+            display: ['Playfair Display', 'serif']
+          },
+          colors: {
+            base: {
+              50: '#fafafa',
+              100: '#f5f5f5',
+              200: '#e5e5e5',
+              300: '#d4d4d4',
+              400: '#a3a3a3',
+              500: '#737373',
+              600: '#525252',
+              700: '#404040',
+              800: '#262626',
+              900: '#171717'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .container { max-width: 1100px; }
+    .card { border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+  </style>
+</head>
+
+<body class="bg-base-50 text-base-900 font-sans">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-base-200">
+    <div class="container mx-auto px-5 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-base-900"></div>
+        <div class="leading-tight">
+          <div class="font-semibold uppercase tracking-wide text-sm">Hemp'in</div>
+          <div class="text-xs text-base-500">your brand, hemp inside</div>
+        </div>
+      </div>
+      <nav class="hidden sm:flex items-center gap-6 text-sm">
+        <a href="#what" class="hover:text-base-600">What</a>
+        <a href="#benefits" class="hover:text-base-600">Benefits</a>
+        <a href="#who" class="hover:text-base-600">Who</a>
+        <a href="#how" class="hover:text-base-600">How</a>
+        <a href="#pricing" class="hover:text-base-600">Pricing</a>
+        <a href="#register" class="px-3 py-2 rounded-full bg-base-900 text-white hover:bg-base-800">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="container mx-auto px-5 py-16 sm:py-24 grid sm:grid-cols-2 gap-10 items-center">
+      <div data-aos="fade-up" data-aos-duration="700">
+        <h1 class="font-display text-4xl sm:text-5xl leading-tight">Hemp'in — <span class="text-base-600">your brand, hemp inside</span></h1>
+        <p class="mt-4 text-base-600 max-w-xl">Pop-up showroom & online marketplace launch in <strong>Bangkok</strong> during the <strong>Asia International Hemp Expo</strong> — Nov 5–7, 2025. Show. Sell. Be seen.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#register" class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-base-900 text-white hover:bg-base-800">
+            <span>Reserve your space</span>
+          </a>
+          <a href="#benefits" class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-base-300 hover:bg-base-100">See benefits</a>
+        </div>
+        <p class="mt-6 text-sm text-base-500">Neutral, brand-friendly design • Mobile-first • Subtle motion</p>
+      </div>
+      <div class="relative" data-aos="fade-left" data-aos-duration="700">
+        <div class="aspect-[4/3] w-full rounded-2xl card bg-white flex items-center justify-center">
+          <div class="p-8 text-center">
+            <div class="uppercase tracking-wider text-xs text-base-500">Bangkok — Nov 5–7, 2025</div>
+            <div class="mt-3 text-2xl font-semibold">Pop‑Up Showroom</div>
+            <div class="mt-1 text-base-500">Physical retail + online marketplace</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is -->
+  <section id="what" class="py-16 sm:py-24 border-t border-base-200 bg-white">
+    <div class="container mx-auto px-5 grid lg:grid-cols-3 gap-10 items-start">
+      <div class="lg:col-span-2" data-aos="fade-up">
+        <h2 class="text-2xl sm:text-3xl font-semibold">What is Hemp'in?</h2>
+        <p class="mt-4 text-base-700 max-w-3xl">Hemp'in is a curated multi‑brand pop‑up in Bangkok where products with <strong>hemp inside</strong> are presented and sold. From <em>fashion</em> to <em>beauty</em>, <em>homeware</em> to <em>food & drink</em> — if hemp is part of your product, you belong here. We showcase you during the Asia International Hemp Expo and add your collection to our online marketplace.</p>
+        <ul class="mt-6 grid sm:grid-cols-2 gap-4 text-base-700">
+          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 bg-base-900 rounded-full"></span>Showroom retail in central Bangkok</li>
+          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 bg-base-900 rounded-full"></span>Marketplace mini‑shop creation</li>
+          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 bg-base-900 rounded-full"></span>In‑store & online sales operations</li>
+          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 bg-base-900 rounded-full"></span>Press, social & stage visibility</li>
+        </ul>
+      </div>
+      <aside class="p-6 rounded-xl card bg-white" data-aos="fade-left">
+        <div class="text-sm uppercase tracking-wider text-base-500">Included bonus</div>
+        <div class="mt-2 font-medium">Vernissage & Invitations</div>
+        <p class="mt-2 text-sm text-base-700">Launch party / vernissage during expo week. Brands that can attend receive <strong>4 guest invitations</strong> automatically.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section id="benefits" class="py-16 sm:py-24 bg-base-50">
+    <div class="container mx-auto px-5">
+      <h2 class="text-2xl sm:text-3xl font-semibold" data-aos="fade-up">Why join</h2>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-xl card bg-white" data-aos="fade-up" data-aos-delay="0">
+          <div class="text-lg font-medium">Global exposure</div>
+          <p class="mt-2 text-base-700">Thousands of visitors in the world's most‑visited city; industry and consumer footfall.</p>
+        </div>
+        <div class="p-6 rounded-xl card bg-white" data-aos="fade-up" data-aos-delay="50">
+          <div class="text-lg font-medium">Direct sales</div>
+          <p class="mt-2 text-base-700">We handle in‑store checkout and enable online orders via your mini‑shop.</p>
+        </div>
+        <div class="p-6 rounded-xl card bg-white" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-lg font-medium">Marketing push</div>
+          <p class="mt-2 text-base-700">Press notes, social features, influencer and stage mentions during the expo.</p>
+        </div>
+        <div class="p-6 rounded-xl card bg-white" data-aos="fade-up" data-aos-delay="150">
+          <div class="text-lg font-medium">Low lift</div>
+          <p class="mt-2 text-base-700">Ship products; we merchandise, staff, and report sales.</p>
+        </div>
+        <div class="p-6 rounded-xl card bg-white" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-lg font-medium">Community & buyers</div>
+          <p class="mt-2 text-base-700">Meet designers, retailers, suppliers and potential collaborators.</p>
+        </div>
+        <div class="p-6 rounded-xl card bg-white" data-aos="fade-up" data-aos-delay="250">
+          <div class="text-lg font-medium">Afterlife online</div>
+          <p class="mt-2 text-base-700">Keep selling via GAIA*PRAGMOSIS marketplace beyond the event.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who can join -->
+  <section id="who" class="py-16 sm:py-24 border-t border-base-200 bg-white">
+    <div class="container mx-auto px-5">
+      <h2 class="text-2xl sm:text-3xl font-semibold" data-aos="fade-up">Who can join</h2>
+      <p class="mt-3 text-base-700 max-w-3xl" data-aos="fade-up" data-aos-delay="50">Any brand with <strong>hemp inside</strong>. Fashion (apparel, accessories, footwear), beauty & personal care, homeware, lifestyle, food & drink, and innovative categories. If hemp is in the product — you are welcome.</p>
+      <div class="mt-6 text-sm text-base-500" data-aos="fade-up" data-aos-delay="100">*Non‑English speakers are welcome. The process is simple and we provide clear shipping instructions.*</div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="py-16 sm:py-24 bg-base-50">
+    <div class="container mx-auto px-5">
+      <h2 class="text-2xl sm:text-3xl font-semibold" data-aos="fade-up">How it works</h2>
+      <ol class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="50">
+        <li class="p-6 rounded-xl card bg-white">
+          <div class="text-base-500 text-sm">Step 1</div>
+          <div class="mt-1 font-medium">Apply online</div>
+          <p class="mt-2 text-base-700">Complete the form and pay your exhibitor fee to reserve.</p>
+        </li>
+        <li class="p-6 rounded-xl card bg-white">
+          <div class="text-base-500 text-sm">Step 2</div>
+          <div class="mt-1 font-medium">Ship products</div>
+          <p class="mt-2 text-base-700">We send shipping address, customs info and deadlines.</p>
+        </li>
+        <li class="p-6 rounded-xl card bg-white">
+          <div class="text-base-500 text-sm">Step 3</div>
+          <div class="mt-1 font-medium">Show & sell</div>
+          <p class="mt-2 text-base-700">We merchandise, run the pop‑up, and enable online orders.</p>
+        </li>
+        <li class="p-6 rounded-xl card bg-white">
+          <div class="text-base-500 text-sm">Step 4</div>
+          <div class="mt-1 font-medium">Get paid</div>
+          <p class="mt-2 text-base-700">Receive sales proceeds minus handling/processing fees.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-16 sm:py-24 border-t border-base-200 bg-white">
+    <div class="container mx-auto px-5">
+      <h2 class="text-2xl sm:text-3xl font-semibold" data-aos="fade-up">Pricing & deadlines</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6" data-aos="fade-up" data-aos-delay="50">
+        <div class="p-6 rounded-xl card bg-white">
+          <div class="text-lg font-medium">Exhibitor fee</div>
+          <ul class="mt-3 space-y-2 text-base-700">
+            <li>Early bird: <strong>USD $350</strong> — until Sept 10</li>
+            <li>Standard: <strong>USD $500</strong> — after Sept 10</li>
+            <li class="text-sm text-base-500">Includes: display & merchandising, marketplace mini‑shop setup, in‑store & online sales handling, promo visibility, vernissage invitations.</li>
+          </ul>
+        </div>
+        <div class="p-6 rounded-xl card bg-white">
+          <div class="text-lg font-medium">Event info</div>
+          <ul class="mt-3 space-y-2 text-base-700">
+            <li>Dates: Nov 5–7, 2025 (setup before Nov 4)</li>
+            <li>City: Bangkok, Thailand</li>
+            <li>Vernissage: Launch party during expo week — each brand gets <strong>4 invitations</strong>.</li>
+            <li>Contact: <a class="underline hover:no-underline" href="mailto:info@globalhempservice.com">info@globalhempservice.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Form (Netlify) -->
+  <section id="register" class="py-16 sm:py-24 bg-base-50">
+    <div class="container mx-auto px-5">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-semibold" data-aos="fade-up">Register your brand</h2>
+        <p class="mt-2 text-base-700" data-aos="fade-up" data-aos-delay="50">Fill this short form. After approval, we’ll email payment instructions and shipping details.</p>
+
+        <form name="hempin-registration" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="mt-8 grid gap-4" data-aos="fade-up" data-aos-delay="100">
+          <input type="hidden" name="form-name" value="hempin-registration">
+          <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <label class="block">
+              <span class="text-sm text-base-600">Brand name *</span>
+              <input required name="brand" type="text" class="mt-1 w-full rounded-lg border-base-300 focus:border-base-900 focus:ring-base-900" />
+            </label>
+            <label class="block">
+              <span class="text-sm text-base-600">Website / Instagram</span>
+              <input name="website" type="text" class="mt-1 w-full rounded-lg border-base-300 focus:border-base-900 focus:ring-base-900" placeholder="https:// / @handle" />
+            </label>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <label class="block">
+              <span class="text-sm text-base-600">Contact name *</span>
+              <input required name="contact" type="text" class="mt-1 w-full rounded-lg border-base-300 focus:border-base-900 focus:ring-base-900" />
+            </label>
+            <label class="block">
+              <span class="text-sm text-base-600">Email *</span>
+              <input required name="email" type="email" class="mt-1 w-full rounded-lg border-base-300 focus:border-base-900 focus:ring-base-900" />
+            </label>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <label class="block">
+              <span class="text-sm text-base-600">Country *</span>
+              <input required name="country" type="text" class="mt-1 w-full rounded-lg border-base-300 focus:border-base-900 focus:ring-base-900" />
+            </label>
+            <label class="block">
+              <span class="text-sm text-base-600">Shipping from (country) *</span>
+              <input required name="shipping_from" type="text" class="mt-1 w-full rounded-lg border-base-300 focus:border-base-900 focus:ring-base-900" />
+            </label>
+          </div>
+
+          <label class="block">
+            <span class="text-sm text-base-600">Category *</span>
+            <select required name="category" class="mt-1 w-full rounded-lg border-base-300 focus:border-base-900 focus:ring-base-900">
+              <option value="">Select…</option>
+              <option>Fashion — Apparel</option>
+              <option>Fashion — Accessories</option>
+              <option>Footwear</option>
+              <option>Beauty / Personal care</option>
+              <option>Homeware / Interior</option>
+              <option>Food & Drink</option>
+              <option>Other (has hemp inside)</option>
+            </select>
+          </label>
+
+          <label class="block">
+            <span class="text-sm text-base-600">Tell us about your products *</span>
+            <textarea required name="overview" rows="4" class="mt-1 w-full rounded-lg border-base-300 focus:border-base-900 focus:ring-base-900" placeholder="Materials, key products, price range, what makes it unique"></textarea>
+          </label>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <label class="block">
+              <span class="text-sm text-base-600">Units available for display</span>
+              <input name="units" type="number" min="0" class="mt-1 w-full rounded-lg border-base-300 focus:border-base-900 focus:ring-base-900" />
+            </label>
+            <label class="block">
+              <span class="text-sm text-base-600">Wholesale price range (USD)</span>
+              <input name="wholesale" type="text" class="mt-1 w-full rounded-lg border-base-300 focus:border-base-900 focus:ring-base-900" placeholder="$—$" />
+            </label>
+          </div>
+
+          <fieldset class="grid sm:grid-cols-2 gap-4">
+            <label class="block">
+              <span class="text-sm text-base-600">Fee choice *</span>
+              <select required name="fee" class="mt-1 w-full rounded-lg border-base-300 focus:border-base-900 focus:ring-base-900">
+                <option value="">Select…</option>
+                <option>Early bird (USD 350) — until Sept 10</option>
+                <option>Standard (USD 500) — after Sept 10</option>
+              </select>
+            </label>
+            <label class="inline-flex items-center gap-2 mt-6 sm:mt-8">
+              <input required type="checkbox" name="hemp_inside" class="rounded border-base-300 text-base-900 focus:ring-base-900" />
+              <span class="text-sm text-base-700">I confirm my products contain hemp.</span>
+            </label>
+          </fieldset>
+
+          <label class="inline-flex items-center gap-2">
+            <input required type="checkbox" name="terms" class="rounded border-base-300 text-base-900 focus:ring-base-900" />
+            <span class="text-sm text-base-700">I agree to be contacted about participation and logistics.</span>
+          </label>
+
+          <div class="mt-4 flex flex-wrap items-center gap-4">
+            <button type="submit" class="px-6 py-3 rounded-full bg-base-900 text-white hover:bg-base-800">Submit application</button>
+            <a class="text-sm underline hover:no-underline" href="mailto:info@globalhempservice.com">Questions? info@globalhempservice.com</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-base-200 bg-white">
+    <div class="container mx-auto px-5 py-10 text-sm text-base-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>© <span id="year"></span> Hemp'in • GAIA*PRAGMOSIS / Global Hemp Service</div>
+      <div class="flex items-center gap-4">
+        <a class="hover:text-base-700" href="#what">About</a>
+        <a class="hover:text-base-700" href="#pricing">Pricing</a>
+        <a class="hover:text-base-700" href="#register">Register</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, offset: 80 });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
