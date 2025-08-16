@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HEMP’IN — Brand Palette • Bangkok 1st Edition</title>
+  <meta name="description" content="Brand color palette sheet for HEMP’IN Showroom — Bangkok, 1st Edition. Includes swatches, usage guidance, and exportable design tokens." />
+  <style>
+    :root {
+      /* Brand Tokens */
+      --hemp-beige: #E4DFD4;   /* Core neutral */
+      --stone-gray: #B8B6AF;   
+      --indigo-deep: #2C2F64;  /* Prestige accent */
+      --gold-sand: #C9A66B;    /* Prestige accent */
+      --fresh-teal: #38E2B5;   /* Contemporary edge */
+      --charcoal-black: #1C1C1C;
+      --off-white: #F8F6F2;
+
+      /* UI */
+      --bg: var(--off-white);
+      --ink: var(--charcoal-black);
+      --muted-ink: #5A5A5A;
+      --card: #FFFFFF;
+      --radius: 16px;
+      --shadow: 0 8px 24px rgba(0,0,0,.08);
+      --shadow-soft: 0 3px 12px rgba(0,0,0,.06);
+    }
+
+    /* Theme toggle (preview only) */
+    .theme-dark {
+      --bg: var(--charcoal-black);
+      --ink: var(--off-white);
+      --card: #171717;
+      --muted-ink: #B9B9B9;
+    }
+
+    /* Base */
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    }
+
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 40px 20px 80px; }
+
+    /* Header */
+    .brand {
+      display: grid; gap: 8px; margin-bottom: 28px; align-items: end;
+    }
+    .brand h1 {
+      font-size: clamp(28px, 4.5vw, 48px);
+      line-height: 1.1; margin: 0; letter-spacing: .4px;
+    }
+    .tagline { color: var(--muted-ink); font-size: clamp(14px, 1.5vw, 16px); }
+    .meta { color: var(--muted-ink); font-size: 14px; margin-top: 4px; }
+
+    /* Info banner with subtle hemp texture (diagonal weave) */
+    .banner {
+      position: relative; border-radius: var(--radius);
+      overflow: hidden; box-shadow: var(--shadow);
+      background:
+        repeating-linear-gradient(135deg, rgba(0,0,0,.035) 0 2px, transparent 2px 6px),
+        repeating-linear-gradient(45deg, rgba(0,0,0,.03) 0 2px, transparent 2px 6px);
+      background-color: var(--hemp-beige);
+      padding: 22px 24px;
+      display: grid; gap: 10px; margin: 12px 0 28px;
+      border: 1px solid rgba(0,0,0,.06);
+    }
+    .banner p { margin: 0; }
+
+    /* Grid */
+    .grid { display: grid; gap: 18px; grid-template-columns: repeat(12, 1fr); }
+    @media (max-width: 900px) { .grid { grid-template-columns: repeat(8, 1fr); } }
+    @media (max-width: 640px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+
+    /* Swatch Card */
+    .card {
+      grid-column: span 4;
+      background: var(--card); border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(0,0,0,.07);
+      overflow: hidden;
+    }
+    .swatch {
+      height: 140px; display: grid; place-items: end start; padding: 12px;
+      color: rgba(255,255,255,.95); font-weight: 600; letter-spacing: .4px; font-size: 12px;
+    }
+    .swatch .tag { background: rgba(0,0,0,.22); padding: 6px 8px; border-radius: 10px; }
+    .body { padding: 14px 14px 16px; }
+    .name { font-weight: 700; font-size: 16px; margin: 0 0 4px; }
+    .hex { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 14px; margin: 0 0 8px; }
+    .roles { display: flex; flex-wrap: wrap; gap: 6px; }
+    .role { font-size: 12px; padding: 6px 8px; border-radius: 999px; border: 1px solid rgba(0,0,0,.1); color: var(--muted-ink); }
+
+    /* Usage Examples */
+    .section h2 { margin: 36px 0 10px; font-size: clamp(20px, 2.6vw, 28px); }
+    .examples { display: grid; gap: 18px; grid-template-columns: repeat(12, 1fr); }
+    .example { grid-column: span 6; background: var(--card); border: 1px solid rgba(0,0,0,.07); border-radius: var(--radius); box-shadow: var(--shadow-soft); overflow: hidden; }
+    .example .head { padding: 12px 16px; font-weight: 700; border-bottom: 1px solid rgba(0,0,0,.06); }
+    .example .content { padding: 16px; display: grid; gap: 12px; }
+
+    .btn { display: inline-block; padding: 12px 16px; border-radius: 999px; border: 1px solid transparent; text-decoration: none; font-weight: 700; font-size: 14px; }
+
+    .chip { display: inline-block; padding: 6px 10px; border-radius: 999px; font-size: 12px; border: 1px solid rgba(0,0,0,.08); }
+
+    /* Token export */
+    pre { background: #0f0f0f; color: #f6f6f6; padding: 16px; border-radius: 10px; overflow: auto; box-shadow: var(--shadow-soft); }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 13px; }
+
+    /* Toolbar */
+    .toolbar { display: flex; gap: 8px; align-items: center; margin: 16px 0 26px; }
+    .toolbar button { cursor: pointer; border: 1px solid rgba(0,0,0,.1); border-radius: 999px; padding: 10px 12px; background: var(--card); color: var(--ink); box-shadow: var(--shadow-soft); }
+    .toolbar button:hover { transform: translateY(-1px); }
+    .note { color: var(--muted-ink); font-size: 13px; }
+
+    /* Footer */
+    footer { margin-top: 40px; color: var(--muted-ink); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="wrap" id="top">
+    <header class="brand" aria-label="Brand heading">
+      <h1>HEMP’IN — Brand Palette</h1>
+      <div class="tagline">“Your brands, hemp inside.”</div>
+      <div class="meta">Bangkok • First Edition</div>
+    </header>
+
+    <section class="banner" aria-label="About this palette">
+      <p><strong>Purpose:</strong> A neutral, premium palette built around hemp materials — avoiding clichéd greens while retaining modern freshness. Designed for showroom, digital, and print.</p>
+      <p class="note">Tip: Click a hex code to copy it. Toggle light/dark to preview usage on different backgrounds.</p>
+    </section>
+
+    <div class="toolbar" role="toolbar" aria-label="Preview controls">
+      <button id="toggleTheme" aria-pressed="false" title="Toggle light/dark preview">🌗 Toggle light/dark preview</button>
+      <button id="copyTokens" title="Copy CSS tokens to clipboard">📋 Copy CSS tokens</button>
+      <span id="toast" class="note" aria-live="polite" style="margin-left:6px;"></span>
+    </div>
+
+    <!-- Swatches -->
+    <section aria-label="Color swatches" class="grid">
+      <!-- Hemp Beige -->
+      <article class="card" data-hex="#E4DFD4">
+        <div class="swatch" style="background: var(--hemp-beige); color:#1C1C1C;">
+          <span class="tag">Core Neutral</span>
+        </div>
+        <div class="body">
+          <h3 class="name">Hemp Beige</h3>
+          <p class="hex"><button class="copy" data-value="#E4DFD4" title="Copy">#E4DFD4</button></p>
+          <div class="roles">
+            <span class="role">Backgrounds</span>
+            <span class="role">Cards</span>
+            <span class="role">Texture overlays</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Stone Gray -->
+      <article class="card" data-hex="#B8B6AF">
+        <div class="swatch" style="background: var(--stone-gray);">
+          <span class="tag">Core Neutral</span>
+        </div>
+        <div class="body">
+          <h3 class="name">Stone Gray</h3>
+          <p class="hex"><button class="copy" data-value="#B8B6AF" title="Copy">#B8B6AF</button></p>
+          <div class="roles">
+            <span class="role">UI surfaces</span>
+            <span class="role">Borders</span>
+            <span class="role">Subtle type</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Indigo Deep -->
+      <article class="card" data-hex="#2C2F64">
+        <div class="swatch" style="background: var(--indigo-deep);">
+          <span class="tag">Prestige Accent</span>
+        </div>
+        <div class="body">
+          <h3 class="name">Indigo Deep</h3>
+          <p class="hex"><button class="copy" data-value="#2C2F64" title="Copy">#2C2F64</button></p>
+          <div class="roles">
+            <span class="role">Headlines</span>
+            <span class="role">Buttons (solid)</span>
+            <span class="role">Hero backgrounds</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Gold Sand -->
+      <article class="card" data-hex="#C9A66B">
+        <div class="swatch" style="background: var(--gold-sand); color:#1C1C1C;">
+          <span class="tag">Prestige Accent</span>
+        </div>
+        <div class="body">
+          <h3 class="name">Gold Sand</h3>
+          <p class="hex"><button class="copy" data-value="#C9A66B" title="Copy">#C9A66B</button></p>
+          <div class="roles">
+            <span class="role">Lines & rules</span>
+            <span class="role">Icon accents</span>
+            <span class="role">Callouts</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Fresh Teal -->
+      <article class="card" data-hex="#38E2B5">
+        <div class="swatch" style="background: var(--fresh-teal);">
+          <span class="tag">Contemporary Edge</span>
+        </div>
+        <div class="body">
+          <h3 class="name">Fresh Teal</h3>
+          <p class="hex"><button class="copy" data-value="#38E2B5" title="Copy">#38E2B5</button></p>
+          <div class="roles">
+            <span class="role">Highlights</span>
+            <span class="role">Badges</span>
+            <span class="role">Interactive states</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Charcoal Black -->
+      <article class="card" data-hex="#1C1C1C">
+        <div class="swatch" style="background: var(--charcoal-black);">
+          <span class="tag">Support Shade</span>
+        </div>
+        <div class="body">
+          <h3 class="name">Charcoal Black</h3>
+          <p class="hex"><button class="copy" data-value="#1C1C1C" title="Copy">#1C1C1C</button></p>
+          <div class="roles">
+            <span class="role">Primary text</span>
+            <span class="role">Dark theme UI</span>
+            <span class="role">Overlays</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Off-White -->
+      <article class="card" data-hex="#F8F6F2">
+        <div class="swatch" style="background: var(--off-white); color:#1C1C1C;">
+          <span class="tag">Support Shade</span>
+        </div>
+        <div class="body">
+          <h3 class="name">Off‑White</h3>
+          <p class="hex"><button class="copy" data-value="#F8F6F2" title="Copy">#F8F6F2</button></p>
+          <div class="roles">
+            <span class="role">Type on Indigo</span>
+            <span class="role">Cards (dark mode)</span>
+            <span class="role">Negative space</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Usage Examples -->
+    <section class="section" aria-label="Usage examples">
+      <h2>Usage Examples</h2>
+      <div class="examples">
+        <div class="example" style="grid-column: span 6;">
+          <div class="head">Buttons & Chips</div>
+          <div class="content">
+            <div>
+              <a class="btn" style="background: var(--indigo-deep); color: var(--off-white);" href="#">Primary (Indigo / Off‑White)</a>
+            </div>
+            <div>
+              <a class="btn" style="background: transparent; color: var(--indigo-deep); border-color: var(--indigo-deep);" href="#">Outline (Indigo)</a>
+            </div>
+            <div>
+              <span class="chip" style="background: var(--fresh-teal); color: #0E0E0E; border-color: transparent;">Teal Highlight</span>
+              <span class="chip" style="background: var(--gold-sand); color: #0E0E0E; border-color: transparent;">Gold Accent</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="example" style="grid-column: span 6;">
+          <div class="head">Hero & Card Composition</div>
+          <div class="content">
+            <div style="padding: 16px; border-radius: 12px; background: linear-gradient(135deg, var(--indigo-deep), #1e2150); color: var(--off-white);">
+              <div style="font-weight:800; font-size: 18px; letter-spacing:.3px;">HEMP’IN — Bangkok</div>
+              <div style="opacity:.9; margin:6px 0 10px;">“Your brands, hemp inside.”</div>
+              <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <span class="chip" style="background: var(--fresh-teal); color:#0E0E0E; border:0;">Showroom</span>
+                <span class="chip" style="background: var(--gold-sand); color:#0E0E0E; border:0;">Vernissage</span>
+                <span class="chip" style="background: var(--off-white); color:#0E0E0E;">2025</span>
+              </div>
+            </div>
+
+            <div style="display:grid; gap:12px; grid-template-columns: repeat(12, 1fr);">
+              <div style="grid-column: span 7; background: var(--hemp-beige); border-radius: 12px; padding: 14px;">
+                <div style="font-weight:700; margin-bottom:6px;">Card on Hemp Beige</div>
+                <div class="note">Use <strong>Charcoal Black</strong> for text and <strong>Indigo</strong> accents.</div>
+              </div>
+              <div style="grid-column: span 5; background: var(--stone-gray); border-radius: 12px; padding: 14px; color:#111;">
+                <div style="font-weight:700; margin-bottom:6px;">Utility on Stone Gray</div>
+                <div class="note">Use <strong>Indigo</strong> or <strong>Charcoal</strong> for readable text.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accessibility guidance (practical pairs) -->
+    <section class="section" aria-label="Accessibility">
+      <h2>Practical Color Pairs (Readability)</h2>
+      <ul class="note">
+        <li><strong>Indigo Deep</strong> background with <strong>Off‑White</strong> text — excellent contrast for headlines/buttons.</li>
+        <li><strong>Hemp Beige</strong> background with <strong>Charcoal Black</strong> text — safe for long-form content.</li>
+        <li><strong>Stone Gray</strong> background with <strong>Indigo Deep</strong> or <strong>Charcoal Black</strong> text — for UI surfaces.</li>
+        <li>Use <strong>Gold Sand</strong> and <strong>Fresh Teal</strong> primarily as accents or chips; reserve for short text on dark backgrounds.</li>
+      </ul>
+    </section>
+
+    <!-- Tokens Export -->
+    <section class="section" aria-label="Design tokens">
+      <h2>Exportable Tokens</h2>
+      <p class="note">Copy/paste into your codebase. Variables below mirror this sheet.</p>
+
+      <h3>CSS Custom Properties</h3>
+      <pre><code>:root {
+  --hemp-beige: #E4DFD4;
+  --stone-gray: #B8B6AF;
+  --indigo-deep: #2C2F64;
+  --gold-sand: #C9A66B;
+  --fresh-teal: #38E2B5;
+  --charcoal-black: #1C1C1C;
+  --off-white: #F8F6F2;
+}</code></pre>
+
+      <h3>SCSS Map</h3>
+      <pre><code>$hempin-colors: (
+  hemp-beige: #E4DFD4,
+  stone-gray: #B8B6AF,
+  indigo-deep: #2C2F64,
+  gold-sand: #C9A66B,
+  fresh-teal: #38E2B5,
+  charcoal-black: #1C1C1C,
+  off-white: #F8F6F2
+);
+</code></pre>
+
+      <h3>JSON Tokens</h3>
+      <pre><code>{
+  "hemp-beige": "#E4DFD4",
+  "stone-gray": "#B8B6AF",
+  "indigo-deep": "#2C2F64",
+  "gold-sand": "#C9A66B",
+  "fresh-teal": "#38E2B5",
+  "charcoal-black": "#1C1C1C",
+  "off-white": "#F8F6F2"
+}</code></pre>
+    </section>
+
+    <footer>
+      <p>HEMP’IN — Showroom • Bangkok • 1st Edition. Palette sheet for internal review & designer handoff.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Theme toggle
+    const toggle = document.getElementById('toggleTheme');
+    toggle?.addEventListener('click', () => {
+      const isDark = document.body.classList.toggle('theme-dark');
+      toggle.setAttribute('aria-pressed', String(isDark));
+    });
+
+    // Copy any hex button
+    const toast = document.getElementById('toast');
+    function showToast(msg){
+      toast.textContent = msg; clearTimeout(window.__t);
+      window.__t = setTimeout(()=> toast.textContent = '', 1800);
+    }
+
+    document.querySelectorAll('button.copy').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const value = btn.dataset.value;
+        try {
+          await navigator.clipboard.writeText(value);
+          showToast(`Copied ${value}`);
+        } catch(e){
+          showToast('Copy failed');
+        }
+      })
+    });
+
+    // Copy CSS tokens block
+    document.getElementById('copyTokens')?.addEventListener('click', async () => {
+      const css = `:root{\n  --hemp-beige:#E4DFD4;\n  --stone-gray:#B8B6AF;\n  --indigo-deep:#2C2F64;\n  --gold-sand:#C9A66B;\n  --fresh-teal:#38E2B5;\n  --charcoal-black:#1C1C1C;\n  --off-white:#F8F6F2;\n}`;
+      try {
+        await navigator.clipboard.writeText(css);
+        showToast('CSS tokens copied');
+      } catch(e){ showToast('Copy failed'); }
+    });
+  </script>
+</body>
+</html>
