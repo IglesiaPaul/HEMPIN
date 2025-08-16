@@ -28,6 +28,15 @@
               700: '#404040',
               800: '#262626',
               900: '#171717'
+            },
+            brand: {
+              hemp: '#E4DFD4',
+              stone: '#B8B6AF',
+              indigo: '#2C2F64',
+              gold: '#C9A66B',
+              teal: '#38E2B5',
+              charcoal: '#1C1C1C',
+              offwhite: '#F8F6F2'
             }
           }
         }
@@ -35,23 +44,32 @@
     }
   </script>
 </head>
-<body class="bg-base-50 text-base-900 font-sans">
+<body class="bg-brand-offwhite text-brand-charcoal font-sans">
   <div class="container mx-auto px-5 py-10">
     <a href="/" class="text-sm underline hover:no-underline">&larr; Back to main page</a>
-    <h1 class="mt-6 text-3xl font-semibold">Typography</h1>
+    <h1 class="mt-6 text-3xl font-semibold text-brand-indigo">Typography</h1>
     <div class="mt-8 space-y-8">
       <div>
-        <h2 class="font-display text-4xl">Playfair Display</h2>
-        <p class="mt-2 text-base-700">Used for headlines to convey elegance and sophistication.</p>
+        <h2 class="font-display text-4xl text-brand-indigo">Playfair Display</h2>
+        <p class="mt-2 text-brand-stone">Used for headlines to convey elegance and sophistication.</p>
       </div>
       <div>
-        <h2 class="font-sans text-2xl">Inter</h2>
-        <p class="mt-2 text-base-700">Primary sans-serif font for body text and UI elements.</p>
+        <h2 class="font-sans text-2xl text-brand-charcoal">Inter</h2>
+        <p class="mt-2 text-brand-stone">Primary sans-serif font for body text and UI elements.</p>
       </div>
       <div class="space-y-2">
-        <h3 class="text-xl font-semibold">Scale</h3>
-        <p class="text-base-700">H1 – 3rem • H2 – 2.25rem • H3 – 1.875rem • Body – 1rem</p>
-        <p class="text-base-700">The quick brown fox jumps over the lazy dog.</p>
+        <h3 class="text-xl font-semibold text-brand-indigo">Scale</h3>
+        <p class="text-brand-stone">H1 – 3rem • H2 – 2.25rem • H3 – 1.875rem • Body – 1rem</p>
+        <p class="text-brand-stone">The quick brown fox jumps over the lazy dog.</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8">
+        <div class="p-4 rounded-lg text-center bg-brand-hemp text-brand-charcoal">Hemp Beige</div>
+        <div class="p-4 rounded-lg text-center bg-brand-stone text-brand-charcoal">Stone Gray</div>
+        <div class="p-4 rounded-lg text-center bg-brand-indigo text-white">Indigo Deep</div>
+        <div class="p-4 rounded-lg text-center bg-brand-gold text-white">Gold Sand</div>
+        <div class="p-4 rounded-lg text-center bg-brand-teal text-brand-charcoal">Fresh Teal</div>
+        <div class="p-4 rounded-lg text-center bg-brand-charcoal text-white">Charcoal Black</div>
+        <div class="p-4 rounded-lg text-center bg-brand-offwhite border text-brand-charcoal">Off White</div>
       </div>
     </div>
   </div>
