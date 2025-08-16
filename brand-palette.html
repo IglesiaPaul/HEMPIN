@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HEMP’IN — Brand Palette • Bangkok 1st Edition</title>
   <meta name="description" content="Brand color palette sheet for HEMP’IN Showroom — Bangkok, 1st Edition. Includes swatches, usage guidance, and exportable design tokens." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       /* Brand Tokens */
@@ -37,7 +40,7 @@
     /* Base */
     html, body { height: 100%; }
     body {
-      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      margin: 0; font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
       background: var(--bg);
       color: var(--ink);
       line-height: 1.45;
@@ -51,6 +54,7 @@
       display: grid; gap: 8px; margin-bottom: 28px; align-items: end;
     }
     .brand h1 {
+      font-family: 'Playfair Display', serif;
       font-size: clamp(28px, 4.5vw, 48px);
       line-height: 1.1; margin: 0; letter-spacing: .4px;
     }
@@ -96,7 +100,8 @@
     .role { font-size: 12px; padding: 6px 8px; border-radius: 999px; border: 1px solid rgba(0,0,0,.1); color: var(--muted-ink); }
 
     /* Usage Examples */
-    .section h2 { margin: 36px 0 10px; font-size: clamp(20px, 2.6vw, 28px); }
+    .section h2 { margin: 36px 0 10px; font-size: clamp(20px, 2.6vw, 28px); font-family: 'Playfair Display', serif; }
+    .example .head { font-family: 'Playfair Display', serif; }
     .examples { display: grid; gap: 18px; grid-template-columns: repeat(12, 1fr); }
     .example { grid-column: span 6; background: var(--card); border: 1px solid rgba(0,0,0,.07); border-radius: var(--radius); box-shadow: var(--shadow-soft); overflow: hidden; }
     .example .head { padding: 12px 16px; font-weight: 700; border-bottom: 1px solid rgba(0,0,0,.06); }
