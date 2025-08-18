@@ -235,107 +235,65 @@
   </section>
 
   <!-- Registration Form (Netlify) -->
-  <section id="register" class="py-16 sm:py-24 bg-brand-hemp">
-    <div class="container mx-auto px-5">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="text-2xl sm:text-3xl font-semibold text-brand-indigo" data-aos="fade-up">Register your brand</h2>
-        <p class="mt-2 text-brand-charcoal" data-aos="fade-up" data-aos-delay="50">Fill this short form. After approval, we’ll email payment instructions and shipping details.</p>
+<section id="register" class="py-16 sm:py-24 bg-brand-hemp">
+  <div class="container mx-auto px-5">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-brand-indigo" data-aos="fade-up">Register your brand</h2>
+      <p class="mt-2 text-brand-charcoal" data-aos="fade-up" data-aos-delay="50">
+        Please fill out this short form so we can review your brand and contact you with next steps.
+      </p>
 
-        <form name="hempin-registration" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" class="mt-8 grid gap-4" data-aos="fade-up" data-aos-delay="100">
-          <input type="hidden" name="form-name" value="hempin-registration">
-          <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+      <form name="hempin-registration" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" class="mt-8 grid gap-4" data-aos="fade-up" data-aos-delay="100">
+        <input type="hidden" name="form-name" value="hempin-registration">
+        <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
 
-          <div class="grid sm:grid-cols-2 gap-4">
-            <label class="block">
-                <span class="text-sm text-brand-indigo">Brand name *</span>
-                <input required name="brand" type="text" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
-            </label>
-            <label class="block">
-                <span class="text-sm text-brand-indigo">Website / Instagram</span>
-                <input name="website" type="text" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" placeholder="https:// / @handle" />
-            </label>
-          </div>
-
-          <div class="grid sm:grid-cols-2 gap-4">
-            <label class="block">
-                <span class="text-sm text-brand-indigo">Contact name *</span>
-                <input required name="contact" type="text" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
-            </label>
-            <label class="block">
-                <span class="text-sm text-brand-indigo">Email *</span>
-                <input required name="email" type="email" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
-            </label>
-          </div>
-
-          <div class="grid sm:grid-cols-2 gap-4">
-            <label class="block">
-                <span class="text-sm text-brand-indigo">Country *</span>
-                <input required name="country" type="text" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
-            </label>
-            <label class="block">
-                <span class="text-sm text-brand-indigo">Shipping from (country) *</span>
-                <input required name="shipping_from" type="text" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
-            </label>
-          </div>
-
+        <div class="grid sm:grid-cols-2 gap-4">
           <label class="block">
-            <span class="text-sm text-brand-indigo">Category *</span>
-            <select required name="category" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo">
-              <option value="">Select…</option>
-              <option>Fashion — Apparel</option>
-              <option>Fashion — Accessories</option>
-              <option>Footwear</option>
-              <option>Beauty / Personal care</option>
-              <option>Homeware / Interior</option>
-              <option>Food & Drink</option>
-              <option>Other (has hemp inside)</option>
-            </select>
+            <span class="text-sm text-brand-indigo">Brand name *</span>
+            <input required name="brand" type="text" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
           </label>
-
           <label class="block">
-            <span class="text-sm text-brand-indigo">Tell us about your products *</span>
-            <textarea required name="overview" rows="4" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" placeholder="Materials, key products, price range, what makes it unique"></textarea>
+            <span class="text-sm text-brand-indigo">Website / Instagram *</span>
+            <input required name="website" type="text" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" placeholder="https:// / @handle" />
           </label>
+        </div>
 
-          <div class="grid sm:grid-cols-2 gap-4">
-            <label class="block">
-                <span class="text-sm text-brand-indigo">Units available for display</span>
-                <input name="units" type="number" min="0" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
-            </label>
-            <label class="block">
-                <span class="text-sm text-brand-indigo">Wholesale price range (USD)</span>
-                <input name="wholesale" type="text" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" placeholder="$—$" />
-            </label>
-          </div>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="block">
+            <span class="text-sm text-brand-indigo">Contact name *</span>
+            <input required name="contact" type="text" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
+          </label>
+          <label class="block">
+            <span class="text-sm text-brand-indigo">Email *</span>
+            <input required name="email" type="email" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
+          </label>
+        </div>
 
-          <fieldset class="grid sm:grid-cols-2 gap-4">
-            <label class="block">
-                <span class="text-sm text-brand-indigo">Fee choice *</span>
-                <select required name="fee" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo">
-                <option value="">Select…</option>
-                <option>Early bird (USD 350) — until Sept 10</option>
-                <option>Standard (USD 500) — after Sept 10</option>
-              </select>
-            </label>
-            <label class="inline-flex items-center gap-2 mt-6 sm:mt-8">
-              <input required type="checkbox" name="hemp_inside" class="rounded border-brand-stone text-brand-indigo focus:ring-brand-indigo" />
-              <span class="text-sm text-brand-charcoal">I confirm my products contain hemp.</span>
-            </label>
-          </fieldset>
+        <label class="block">
+          <span class="text-sm text-brand-indigo">Shipping from (country) *</span>
+          <input required name="shipping_from" type="text" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
+        </label>
 
+        <fieldset class="grid gap-3 mt-2">
+          <label class="inline-flex items-center gap-2">
+            <input required type="checkbox" name="hemp_inside" class="rounded border-brand-stone text-brand-indigo focus:ring-brand-indigo" />
+            <span class="text-sm text-brand-charcoal">I confirm my products contain hemp.</span>
+          </label>
           <label class="inline-flex items-center gap-2">
             <input required type="checkbox" name="terms" class="rounded border-brand-stone text-brand-indigo focus:ring-brand-indigo" />
             <span class="text-sm text-brand-charcoal">I agree to be contacted about participation and logistics.</span>
           </label>
+        </fieldset>
 
-          <div class="mt-4 flex flex-wrap items-center gap-4">
-            <button type="submit" class="px-6 py-3 rounded-full bg-brand-indigo text-white hover:bg-brand-indigo/90">Submit application</button>
-            <a class="text-sm underline hover:no-underline" href="mailto:info@globalhempservice.com">Questions? info@globalhempservice.com</a>
-          </div>
-        </form>
-      </div>
+        <div class="mt-4 flex flex-wrap items-center gap-4">
+          <button type="submit" class="px-6 py-3 rounded-full bg-brand-indigo text-white hover:bg-brand-indigo/90">Submit application</button>
+          <a class="text-sm underline hover:no-underline" href="mailto:info@globalhempservice.com">Questions? info@globalhempservice.com</a>
+        </div>
+      </form>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Footer -->
     <footer class="border-t border-brand-stone bg-white">
