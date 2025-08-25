@@ -63,7 +63,7 @@
     html { scroll-behavior: smooth; }
     .container { max-width: 1100px; }
     .card { border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
-    .floorplan { max-width: 600px; margin: 1.5rem auto; }
+    .floorplan { max-width: 600px; }
   </style>
 </head>
 
@@ -122,15 +122,17 @@
         <h2 class="text-2xl sm:text-3xl font-semibold text-brand-indigo">What is Hemp'in?</h2>
         <p class="mt-4 text-brand-charcoal max-w-3xl">Hemp'in is a curated multi‑brand pop‑up in Bangkok where products with <strong>hemp inside</strong> are presented and sold. From <em>fashion</em> to <em>beauty</em>, <em>homeware</em> to <em>food & drink</em> — if hemp is part of your product, you belong here. We showcase you during the Asia International Hemp Expo and add your collection to our online marketplace.</p>
         <p class="mt-4 text-brand-charcoal max-w-3xl">The showroom features six zones: <strong>Fashion</strong>, <strong>Beauty</strong>, <strong>Homeware</strong>, <strong>Food &amp; Drink</strong>, <strong>21+ THC &amp; Recreational</strong>, and <strong>Medical</strong>.</p>
-        <div class="floorplan" data-aos="fade-up">
-          <img src="floorplan.svg" alt="Floorplan of showroom highlighting Fashion, Beauty, Homeware, Food & Drink, 21+ THC & Recreational, and Medical zones" class="w-full h-auto rounded-xl card" />
+        <div class="mt-4 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start" data-aos="fade-up">
+          <div class="floorplan mx-auto lg:mx-0">
+            <img src="floorplan.svg" alt="Floorplan of showroom highlighting Fashion, Beauty, Homeware, Food & Drink, 21+ THC & Recreational, and Medical zones" class="w-full h-auto rounded-xl card" />
+          </div>
+          <ul class="mt-6 lg:mt-0 grid sm:grid-cols-2 gap-4 text-brand-charcoal">
+            <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 bg-brand-indigo rounded-full"></span>Showroom retail in central Bangkok</li>
+            <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 bg-brand-indigo rounded-full"></span>Marketplace mini‑shop creation</li>
+            <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 bg-brand-indigo rounded-full"></span>In‑store & online sales operations</li>
+            <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 bg-brand-indigo rounded-full"></span>Press, social & stage visibility</li>
+          </ul>
         </div>
-        <ul class="mt-6 grid sm:grid-cols-2 gap-4 text-brand-charcoal">
-          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 bg-brand-indigo rounded-full"></span>Showroom retail in central Bangkok</li>
-          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 bg-brand-indigo rounded-full"></span>Marketplace mini‑shop creation</li>
-          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 bg-brand-indigo rounded-full"></span>In‑store & online sales operations</li>
-          <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 bg-brand-indigo rounded-full"></span>Press, social & stage visibility</li>
-        </ul>
       </div>
       <aside class="p-6 rounded-xl card bg-white" data-aos="fade-left">
         <div class="text-sm uppercase tracking-wider text-brand-stone">Included bonus</div>
