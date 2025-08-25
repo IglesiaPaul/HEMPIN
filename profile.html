@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brand Profile – Hemp'in</title>
+  <meta name="description" content="Manage your Hemp'in brand profile and products." />
+  <link rel="icon" sizes="32x32" href="/hi-logo-32.png">
+  <link rel="icon" sizes="192x192" href="/hi-logo-192.png">
+  <link rel="icon" sizes="512x512" href="/hi-logo-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+            display: ['Playfair Display', 'serif']
+          },
+          colors: {
+            brand: {
+              hemp: '#E4DFD4',
+              stone: '#B8B6AF',
+              indigo: '#2C2F64',
+              gold: '#C9A66B',
+              teal: '#38E2B5',
+              charcoal: '#1C1C1C',
+              offwhite: '#F8F6F2'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-offwhite text-brand-charcoal font-sans">
+  <main class="container mx-auto px-5 py-10 max-w-3xl">
+    <h1 id="brand-heading" class="text-3xl font-semibold text-brand-indigo mb-6"></h1>
+    <form id="brand-form" class="grid gap-4 mb-10">
+      <label class="block">
+        <span class="text-sm text-brand-indigo">Brand name</span>
+        <input name="brand" type="text" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
+      </label>
+      <label class="block">
+        <span class="text-sm text-brand-indigo">Website / Instagram</span>
+        <input name="website" type="text" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
+      </label>
+      <label class="block">
+        <span class="text-sm text-brand-indigo">Contact name</span>
+        <input name="contact" type="text" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
+      </label>
+      <label class="block">
+        <span class="text-sm text-brand-indigo">Email</span>
+        <input name="email" type="email" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
+      </label>
+      <label class="block">
+        <span class="text-sm text-brand-indigo">Shipping from (country)</span>
+        <input name="shipping_from" type="text" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
+      </label>
+      <label class="block">
+        <span class="text-sm text-brand-indigo">Status</span>
+        <select name="status" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo">
+          <option value="pending shipment to Hempin Bangkok">pending shipment to Hempin Bangkok</option>
+          <option value="received in Bangkok">received in Bangkok</option>
+          <option value="displayed">displayed</option>
+        </select>
+      </label>
+      <button type="submit" class="mt-2 px-6 py-3 rounded-full bg-brand-indigo text-white hover:bg-brand-indigo/90">Save profile</button>
+    </form>
+
+    <section>
+      <h2 class="text-2xl font-semibold text-brand-indigo mb-4">Products</h2>
+      <div id="products" class="grid gap-4"></div>
+      <button id="add-product" class="mt-4 px-4 py-2 rounded-full bg-brand-indigo text-white hover:bg-brand-indigo/90">Add product</button>
+    </section>
+  </main>
+
+  <template id="product-template">
+    <div class="border border-brand-stone rounded-lg p-4 grid gap-2">
+      <input name="name" placeholder="Product name" class="w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
+      <textarea name="description" placeholder="Description" class="w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo"></textarea>
+      <input name="image" type="file" accept="image/*" class="w-full" />
+      <button class="remove text-sm text-red-600">Remove</button>
+    </div>
+  </template>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const brandId = params.get('brand');
+    const brands = JSON.parse(localStorage.getItem('brands') || '{}');
+    if (!brandId || !brands[brandId]) {
+      document.body.innerHTML = '<main class="container mx-auto px-5 py-10"><p>Brand not found.</p></main>';
+    } else {
+      const brand = brands[brandId];
+      document.getElementById('brand-heading').textContent = brand.brand;
+      const form = document.getElementById('brand-form');
+      for (const key of ['brand','website','contact','email','shipping_from','status']) {
+        form.elements[key].value = brand[key] || '';
+      }
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(form).entries());
+        brands[brandId] = { ...brands[brandId], ...data };
+        localStorage.setItem('brands', JSON.stringify(brands));
+        alert('Profile saved');
+      });
+
+      const productsDiv = document.getElementById('products');
+      const template = document.getElementById('product-template').content;
+
+      function renderProducts() {
+        productsDiv.innerHTML = '';
+        brands[brandId].products.forEach((p, index) => {
+          const clone = document.importNode(template, true);
+          clone.querySelector('input[name="name"]').value = p.name;
+          clone.querySelector('textarea[name="description"]').value = p.description;
+          if (p.image) {
+            const img = document.createElement('img');
+            img.src = p.image;
+            img.className = 'w-32 h-32 object-cover rounded';
+            clone.querySelector('input[name="image"]').before(img);
+          }
+          clone.querySelector('.remove').addEventListener('click', () => {
+            brands[brandId].products.splice(index,1);
+            localStorage.setItem('brands', JSON.stringify(brands));
+            renderProducts();
+          });
+          clone.querySelector('input[name="image"]').addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+              const reader = new FileReader();
+              reader.onload = ev => {
+                brands[brandId].products[index].image = ev.target.result;
+                localStorage.setItem('brands', JSON.stringify(brands));
+                renderProducts();
+              };
+              reader.readAsDataURL(file);
+            }
+          });
+          productsDiv.appendChild(clone);
+        });
+      }
+
+      renderProducts();
+
+      document.getElementById('add-product').addEventListener('click', () => {
+        const current = brands[brandId].products.length;
+        if (current >= 5) {
+          alert('Maximum of 5 products reached');
+          return;
+        }
+        brands[brandId].products.push({name:'',description:'',image:''});
+        localStorage.setItem('brands', JSON.stringify(brands));
+        renderProducts();
+      });
+    }
+  </script>
+</body>
+</html>
