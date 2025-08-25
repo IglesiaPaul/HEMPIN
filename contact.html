@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact – Hemp'in</title>
+  <meta name="description" content="Get in touch with the Hemp'in team." />
+  <link rel="icon" sizes="32x32" href="/hi-logo-32.png">
+  <link rel="icon" sizes="192x192" href="/hi-logo-192.png">
+  <link rel="icon" sizes="512x512" href="/hi-logo-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+            display: ['Playfair Display', 'serif']
+          },
+          colors: {
+            brand: {
+              hemp: '#E4DFD4',
+              stone: '#B8B6AF',
+              indigo: '#2C2F64',
+              gold: '#C9A66B',
+              teal: '#38E2B5',
+              charcoal: '#1C1C1C',
+              offwhite: '#F8F6F2'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-offwhite text-brand-charcoal font-sans">
+  <main class="container mx-auto px-5 py-10 max-w-xl">
+    <h1 class="text-3xl font-semibold text-brand-indigo mb-6">Contact us</h1>
+    <p>If you cannot complete online registration or have special requests, please use this form and we will get back to you.</p>
+    <form name="hempin-contact" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" class="mt-8 grid gap-4">
+      <input type="hidden" name="form-name" value="hempin-contact">
+      <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+
+      <label class="block">
+        <span class="text-sm text-brand-indigo">Brand name *</span>
+        <input required name="brand" type="text" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
+      </label>
+      <label class="block">
+        <span class="text-sm text-brand-indigo">Website / Instagram *</span>
+        <input required name="website" type="text" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" placeholder="https:// / @handle" />
+      </label>
+      <label class="block">
+        <span class="text-sm text-brand-indigo">Contact name *</span>
+        <input required name="contact" type="text" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
+      </label>
+      <label class="block">
+        <span class="text-sm text-brand-indigo">Email *</span>
+        <input required name="email" type="email" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo" />
+      </label>
+      <label class="block">
+        <span class="text-sm text-brand-indigo">Message *</span>
+        <textarea required name="message" class="mt-1 w-full rounded-lg border-brand-stone focus:border-brand-indigo focus:ring-brand-indigo"></textarea>
+      </label>
+      <button type="submit" class="mt-2 px-6 py-3 rounded-full bg-brand-indigo text-white hover:bg-brand-indigo/90">Send</button>
+    </form>
+  </main>
+</body>
+</html>
